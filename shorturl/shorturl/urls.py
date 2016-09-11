@@ -1,4 +1,4 @@
-from django.conf.urls import patterns, url, include
+from django.conf.urls import url, include
 from django.contrib import admin
 admin.autodiscover()
 
@@ -6,7 +6,7 @@ admin.autodiscover()
 # from django.contrib import admin
 # admin.autodiscover()
 
-urlpatterns = patterns('',
+urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^u/(?P<name>[^/]+)$', 'urllink.views.link'),
-)
+]
