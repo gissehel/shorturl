@@ -8,5 +8,5 @@ admin.autodiscover()
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^u/(?P<name>[^/]+)$', 'urllink.views.link'),
+    url(r'^u/', include('urllink.urls')),
 ]
